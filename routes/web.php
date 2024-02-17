@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome'); // Default welcome page
 });
+
+Route::get('/about-me', 'AboutMeController@index');
+Route::get('/skills', 'SkillsController@index');
+Route::get('/hobbies', 'HobbiesController@index');
