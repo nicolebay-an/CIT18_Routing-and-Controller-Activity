@@ -18,6 +18,14 @@ Route::get('/', function () {
     return view('welcome'); // Default welcome page
 });
 
-Route::get('/about-me', 'AboutMeController@index');
-Route::get('/skills', 'SkillsController@index');
-Route::get('/hobbies', 'HobbiesController@index');
+Route::get('/about-me', function () {
+    return view('about_me'); 
+});
+
+Route::get('/skills', function () {
+    return view('skills'); 
+});
+
+Route::get('/hobbies', function () {
+    return view('hobbies'); 
+});
